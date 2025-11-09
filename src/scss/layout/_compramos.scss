@@ -1,0 +1,161 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.compramos {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.compramos-top {
+    @include m.tablet {
+        @include m.grid(2, 0);
+        height: 53rem;
+    }
+
+    .compramos-img {
+        @include m.background(url("../../src/img/compramos.jpg"));
+        height: 26rem;
+
+        @include m.tablet {
+            height: 53rem;
+        }
+    }
+
+    .compramos-info {
+        background-color: v.$grisFondo;
+        padding: 4rem;
+
+        @include m.tablet {
+            padding: 8rem;
+        }
+
+        @include m.xl {
+            padding: 12rem;
+        }
+    }
+
+    .compramos-info h2,
+    p,
+    a,
+    span {
+        color: v.$negro;
+        text-align: left;
+        margin: 0;
+    }
+
+    .compramos-info span {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .compramos-info p {
+        margin: 3rem 0;
+        line-height: 1.6;
+
+        @include m.tablet {
+            font-size: 2rem;
+        }
+    }
+
+    .btn2 {
+        @include m.boton(v.$negro, inline-block);
+        color: v.$blanco;
+        width: 100%;
+
+        @include m.tablet {
+            width: auto;
+        }
+    }
+}
+
+
+.compramos-bot {
+    display: flex;
+    align-items: stretch;
+    margin: 0 auto;
+    flex-direction: column;
+    @include m.tablet{
+        flex-direction: row;
+    }
+}
+
+.compramos-iconos {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+}
+
+.compramos-icon1,
+.compramos-icon2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+
+    @include m.tablet{
+        padding: 6rem;
+    }
+    @include m.xl{
+        padding: 10rem;
+    }
+}
+
+.compramos-icon1 p,
+.compramos-icon2 p {
+    text-align: center;
+    color: v.$negro;
+    font-size: 1.6rem;
+    line-height: 1.4;
+
+    @include m.tablet {
+        font-size: 2rem;
+    }
+
+    @include m.xl {
+        font-size: 3rem;
+    }
+}
+
+.compramos-icon1 img,
+.compramos-icon2 img {
+    width: 8rem;
+    margin-bottom: 0.5rem;
+
+    @include m.tablet {
+        width: 10rem;
+    }
+
+    @include m.xl {
+        width: 14rem;
+    }
+}
+
+.compramos-icon1 {
+    background-color: v.$grisFondo;
+}
+
+.compramos-icon2 {
+    background-color: v.$blanco;
+}
+
+.compramos-img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-principal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include m.xl {
+        max-width: 96rem;
+    }
+}

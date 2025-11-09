@@ -1,0 +1,59 @@
+@use 'variables' as v;
+
+@mixin tel {
+    @media (min-width: v.$tel) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desk {
+    @media (min-width: v.$desk) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: v.$xl) {
+        @content;
+    }
+}
+
+@mixin grid($columnas, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}
+@mixin reset-lista{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+@mixin boton($bgColor, $display){
+    background-color: $bgColor;
+    color: v.$blanco;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    display: $display;
+    border: 2px solid v.$blanco;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+@mixin background($bgImage){
+    background-image: $bgImage;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}

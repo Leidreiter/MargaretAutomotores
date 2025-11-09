@@ -1,0 +1,85 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000000;
+}
+
+.contenido-header {
+    padding: 2rem;
+
+    @include m.tablet {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.izq {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include m.tablet{
+        column-gap: 1rem;
+    }
+
+    @include m.xl {
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap: 2rem;
+    }
+}
+
+.der {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+
+    @include m.tablet {
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 2rem;
+    }
+}
+
+.header {
+    background-color: v.$negro;
+    margin: 0 auto;
+
+    @include m.tablet{
+        padding-left: 3rem;
+    }
+    @include m.xl {
+        padding-left: 6rem;
+    }
+
+    .logo {
+        width: 16rem;
+
+        @include m.tablet {
+            width: 14rem;
+            margin: 0;
+        }
+        @include m.xl {
+            width: 18rem;
+        }
+    }
+}
+
+
+.ubicacion {
+    color: v.$blanco;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}

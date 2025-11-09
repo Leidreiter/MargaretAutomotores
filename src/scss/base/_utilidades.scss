@@ -1,0 +1,32 @@
+@use 'base/mixins' as m;
+
+.contenedor{
+    width: 90%;
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.contenedorS{
+    width: 90%;
+    max-width: 96rem;
+    margin: 0 auto;
+}
+.may{
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+/* Whatsapp */
+.whatsapp {
+    width: 5rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 1000000;
+
+    @include m.tablet{
+        width: 5.6rem;
+    }
+    @include m.xl{
+        width: 6.4rem;
+    }
+}

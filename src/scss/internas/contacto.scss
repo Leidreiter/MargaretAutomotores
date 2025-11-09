@@ -1,0 +1,96 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+    background-color: v.$secundario;
+    width: 100%;
+    height: auto;
+    
+    @include m.tablet{
+        height: 42rem;
+    }
+
+    .formulario-grid{
+        @include m.tablet{
+            @include m.grid(2, 16rem);
+        }
+    }
+
+    .grid-form{
+        padding: 2rem 0;
+
+        @include m.tablet{
+        margin-top: -50rem;
+        z-index: 100000;
+        }
+    }
+    .grid-form h1{
+        color: v.$blanco;
+        margin-bottom: 2rem;
+    }
+    .form{
+        background-color: v.$blanco;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        border-radius: .8rem;
+        padding: 2rem;
+        
+        @include m.tablet{
+            padding: 4rem;
+            margin-top: 4rem;
+        }
+    }
+    .labels{
+        display: block;
+        font-size: 2rem;
+        width: 100%;
+    }
+    .campo{
+        display: block;
+        border-radius: .8rem;
+        padding: 1.8rem;
+        border: 2px solid v.$gris;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .enviar{
+        font-family: v.$fuente_principal;
+        width: 100%;
+        border-radius: .4rem;
+        background-color: v.$negro;
+        text-align: center;
+        color: v.$blanco;
+        padding: 2.2rem;
+        font-size: 2.2rem;
+        border: none;
+
+        &:hover{
+            cursor: pointer;
+            background-color: v.$primario;
+            color: v.$blanco;
+        }
+    }
+    select, input, label, option{
+        font-family: v.$fuente_principal;
+    }
+
+    .contactos{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+        align-items: center;
+
+        @include m.tablet{
+            align-items: flex-start;
+            margin-left: 4rem;
+            padding: 4rem 0;
+        }
+    }
+    .whats{
+        font-size: 2.2rem;
+    }
+    .whats i{
+        color: v.$primario;
+    }
+}

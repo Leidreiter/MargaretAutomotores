@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.pagos{
+    background-color: v.$blanco;
+    padding: 3rem 0;
+
+    @include m.tablet{
+        padding: 12rem 0;
+        @include m.grid(3, 2rem);
+        align-items: stretch;
+    }
+    .pago{
+        margin: 0 auto;
+        padding: 2rem;
+        @include m.tablet{
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between;
+        }
+    }
+    .pago_icono{
+        margin: 0 auto;
+        width: 12rem;
+        @include m.tablet{
+            width: 14rem;
+        }
+    }
+    .pago_copy{
+        margin: 2rem 0;
+        @include m.tablet{
+            margin: 4rem 0;
+        }
+    }
+    .pago_t{
+        text-align: center;
+    }
+    .pago_p{
+        color: v.$negro;
+        margin: 1rem 0;
+        text-align: center
+    }
+    .btn2{
+        @include m.boton(v.$negro, block);
+        width: 100%;
+
+        @include m.tablet{
+            display: inline-block;
+            width: auto;
+            align-self: center;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "margaret",
+  "version": "1.0.0",
+  "description": "Margaret Automotores web official",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp"
+  },
+  "keywords": [
+    "sass",
+    "gulp"
+  ],
+  "author": "Martin Leidreiter",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.93.2"
+  }
+}

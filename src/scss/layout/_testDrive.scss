@@ -1,0 +1,76 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.testDrive{
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    @include m.background(url("../../src/img/testDrive.jpg"));
+    @include m.tablet{
+        height: 40rem;
+    }
+
+    &_contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include m.tablet{
+            flex-direction: row;
+            align-items: flex-end;
+        }
+    }
+    &_overlay{
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.testDrive_I, .testDrive_D{
+    @include m.tablet{
+        flex: 1;
+    }
+}
+.testDrive_I h2, 
+.testDrive_I p{
+    color: v.$blanco;
+    text-align: center;
+    @include m.tablet{
+        text-align: left;
+    }
+}
+.testDrive_I p{
+    font-size: 2rem;
+    line-height: 1.4;
+    margin: 3rem 0;
+    
+    @include m.tablet{
+        font-size: 2.4rem;
+    }
+    @include m.xl{
+        font-size: 3rem;
+    }
+}
+
+.testDrive_D{
+    @include m.tablet{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
+
+.testDrive_D a{
+    color: v.$blanco;
+    font-size: 2rem;
+    display: block;
+
+    @include m.tablet{
+        font-size: 2.4rem;
+    }
+    @include m.xl{
+        font-size: 3rem;
+    }
+}

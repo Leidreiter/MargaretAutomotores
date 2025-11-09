@@ -1,0 +1,119 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor{
+    width: 90%;
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.main{
+    background-color: v.$secundario;
+    width: 100%;
+}
+.vehiculos{
+    padding: 2rem 0;
+    display: grid;
+    gap: 2rem;
+    @include m.tablet{
+        grid-template-columns: repeat(3, 1fr);
+        position: relative;
+        top: -8rem;
+    }
+}
+.vehiculo1{
+    @include m.background(url("../../src/img/vehiculos/peugeot206/main.jpg"));
+}
+.vehiculo2{
+    @include m.background(url("../../src/img/vehiculos/gol/main.jpg"));
+}
+.vehiculo3{
+    @include m.background(url("../../src/img/vehiculos/strada/main.jpg"));
+}
+.vehiculo4{
+    @include m.background(url("../../src/img/vehiculos/agile/main.jpg"));
+}
+.vehiculo5{
+    @include m.background(url("../../src/img/vehiculos/scania/main.jpg"));
+}
+.vehiculo6{
+    @include m.background(url("../../src/img/vehiculos/semi/main.jpg"));
+}
+.vehiculo7{
+    @include m.background(url("../../src/img/vehiculos/308/main.jpg"));
+}
+.vehiculo8{
+    @include m.background(url("../../src/img/vehiculos/vwgol/main.jpg"));
+}
+.vehiculo1, .vehiculo2, .vehiculo3,
+.vehiculo4, .vehiculo5, .vehiculo6,
+.vehiculo7, .vehiculo8 {
+    width: 100%;
+    height: 30rem;
+
+    @include m.tablet{
+        height: 45rem;
+    }
+    @include m.xl{
+        height: 60rem;
+    }
+
+    p, a{
+        color: v.$blanco;
+        margin: 0;
+        line-height: 1.4;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .modelo{
+        font-size: 1.6rem;
+
+        @include m.tablet{
+            font-size: 2rem;
+        }
+        @include m.xl{
+            font-size: 2.4rem;
+        }
+    }
+    .año{
+        font-size: 2.2rem;
+
+        @include m.tablet{
+            font-size: 2.8rem;
+        }
+        @include m.xl{
+            font-size: 3.4rem;
+        }
+    }
+
+    &_overlay{
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 2rem;
+        transition: background 0.3s ease-in;
+    }
+    &:hover &_overlay {
+        background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0)); 
+    }
+    .btn3{
+    width: 100%;
+    margin-top: 2rem;
+    @include m.boton(rgba(0, 0, 0, 0.100), block);
+    font-weight: normal;
+
+    @include m.tablet{
+        width: auto;
+        align-self: flex-start;
+    }
+    &:hover{
+        background-color: v.$blanco;
+        color: v.$negro;
+    }
+}
+}
+

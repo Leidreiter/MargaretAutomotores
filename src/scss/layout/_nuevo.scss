@@ -1,0 +1,163 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nuevo {
+    width: 100%;
+}
+
+.nuevo_img {
+    @include m.background(url("../../src/img/destacadoBG.jpg"));
+    position: relative;
+    margin: 0;
+
+    &_overlay {
+        position: absolute;
+        height: 34rem;
+        inset: 0;
+        @include m.tablet{
+            height: 28rem;
+        }
+    }
+
+    .nuevo_t {
+        text-align: center;
+        color: v.$blanco;
+        padding-top: 3rem;
+        @include m.tablet{
+            padding: 6rem 0;
+        }
+        @include m.xl {
+            padding: 12rem 0;
+        }
+    }
+
+    .nuevo_img-img {
+        width: 100%;
+        margin-top: 4rem;
+        margin: 0 auto;
+        @include m.tablet{
+            width: 70%;
+        }
+        @include m.xl {
+            width: 90%;
+            margin-top: 0;
+        }
+    }
+}
+
+.nuevo_info {
+    background-color: v.$blanco;
+    @include m.tablet{
+        padding-bottom: 6rem;
+    }
+}
+
+.nuevo_infoT {
+    display: flex;
+    align-items: flex-end;
+}
+
+.info_modelo {
+    flex: 85%;
+    color: v.$negro;
+}
+
+.info_marca {
+    flex: 15%;
+
+}
+.logo_marca{
+    width: 5rem;
+    @include m.tablet{
+        width: 8rem;
+    }
+    @include m.xl{
+        width: 10rem;
+    }
+}
+
+.year,
+.model {
+    color: v.$negro;
+    text-align: left;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.year {
+    font-size: 2rem;
+
+    @include m.tablet {
+        font-size: 2rem;
+    }
+}
+
+.model {
+    text-align: left;
+}
+
+.nuevo_infoB {
+    @include m.tablet {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    .info_total {
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 6rem;
+        }
+    }
+
+    .info {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        row-gap: 2rem;
+
+        @include m.tablet {
+            padding-right: 3rem;
+            display: block;
+            border-right: 2px solid v.$gris;
+
+            &:last-of-type {
+                border-right: none;
+            }
+        }
+    }
+
+    .info_T,
+    .info_V {
+        text-transform: uppercase;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .info_T {
+        color: v.$gris2 ;
+        font-size: 1.6rem;
+    }
+
+    .info_V {
+        color: v.$negro ;
+        font-size: 2rem;
+
+        @include m.tablet {
+            font-size: 3rem;
+            line-height: 1.8;
+        }
+    }
+
+    .btn2 {
+        @include m.boton(v.$negro, block);
+        margin: 3rem 0;
+        @include m.tablet{
+            margin: 0;
+        }
+    }
+}

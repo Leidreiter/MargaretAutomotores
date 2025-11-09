@@ -1,0 +1,58 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.banner {
+    width: 100%;
+    @include m.tablet{
+        display: flex;
+    }
+
+    .banner_img {
+        height: 20rem;
+        @include m.background(url("../../src/img/banner-familia.jpg"));
+
+        @include m.tablet{
+            height: 40rem;
+            flex: 3;
+        }
+        @include m.xl{
+            height: 60rem;
+        }
+    }
+
+    .banner-contenido {
+        background-color: v.$gris3;
+        padding: 3rem 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+        @include m.tablet {
+            flex: 1;
+            padding: 6rem;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            row-gap: 4rem;
+        }
+    }
+
+    .banner_t {
+        text-wrap: balance;
+        color: v.$blanco;
+    }
+    .banner_p{
+        text-wrap: balance;
+    }
+
+    .btn3 {
+        @include m.boton(transparent, block);
+        width: 100%;
+
+        @include m.tablet {
+            display: inline-block;
+            width: auto;
+        }
+    }
+}

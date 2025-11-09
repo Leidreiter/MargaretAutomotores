@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.btn2, .btn3{
+    border: 2px solid v.$blanco;
+}
+
+.btn1 {
+    display: none;
+
+    @include m.tablet {
+        @include m.boton(v.$primario, block);
+        padding: 2rem 3rem;
+        border: none;
+        margin: 0;
+    }
+    @include m.xl{
+        padding: 3rem 4rem;
+    }
+}
+
+.btn2 {
+        @include m.boton(v.$blanco, inline);
+        color: v.$negro;
+        
+        &:hover{
+            background-color: v.$primario;
+            border-color: v.$primario;
+            color: v.$blanco;
+        }
+    }
+
+.btn3 {
+        @include m.boton(transparent, inline);
+        color: v.$blanco;
+
+        &:hover{
+            background-color: v.$blanco;
+            color: v.$negro;
+        }
+    }

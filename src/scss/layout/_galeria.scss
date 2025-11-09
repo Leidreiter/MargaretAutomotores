@@ -1,0 +1,82 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria{
+    background-color: v.$grisFondo;
+    padding: 2rem 0;
+    @include m.tablet{
+        padding: 8rem 0;
+    }
+
+    /* Galería Desk */
+
+    .galeria-desk{
+        margin-top: 2rem;
+        @include m.tablet{
+            margin-top: 4rem;
+        }
+    }
+.product-gallery {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    @include m.tablet{
+        flex-direction: row;
+    }
+}
+
+.main-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.thumbnail-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-top: 1rem;
+
+    @include m.tablet{
+        flex-direction: column;
+        margin-right: 20px;
+    }
+}
+
+.thumbnail-images img {
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+
+    @include m.tablet{
+        width: 20rem;
+    }
+}
+.thumbnail-image {
+    width: 9rem;
+    height: 9rem;
+    overflow: hidden;
+
+    @include m.tablet{
+        width: 18rem;
+        height: auto;
+        margin-right: 20px;
+    }
+}
+.thumbnail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.thumbnail-images img:hover {
+    border-color: v.$primario;
+}
+}

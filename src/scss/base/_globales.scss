@@ -1,0 +1,115 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+      scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+p {
+    color: v.$negro;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+a {
+    font-size: 1.6rem;
+    margin: 0;
+
+    @include m.xl {
+        font-size: 1.8rem;
+    }
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span,
+label,
+input,
+button{
+    font-family: v.$fuente_principal;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.8rem;
+    line-height: 1.4;
+    
+    @include m.tablet{
+        font-size: 6.4rem;
+        line-height: 1.2;
+    }
+    @include m.xl {
+        font-size: 8rem;
+        line-height: 1.2;
+    }
+}
+
+h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    
+    @include m.tablet{
+        font-size: 4.6rem;
+    }
+    @include m.xl {
+        font-size: 6rem;
+        line-height: 1;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 1.2;
+    @include m.tablet{
+        font-size: 3.6rem;
+    }
+    @include m.xl {
+        font-size: 4.4rem;
+        line-height: 1;
+    }
+}
+
+h4 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+
+    @include m.tablet{
+        font-size: 2.6rem;
+    }
+    @include m.xl{
+        font-size: 3.4rem;
+        line-height: 1.4;
+    }
+}
+
+i {
+    font-family: "Font Awesome 6 Free";
+    margin-right: 1rem;
+}
