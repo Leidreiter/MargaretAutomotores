@@ -1,33 +1,28 @@
-import { src, dest, watch, series } from 'gulp'
-import * as dartSass from 'sass'
-import gulpSass from 'gulp-sass'
+import { src, dest, watch, series} from 'gulp'
+import * as dartSass from 'sass' 
+import gulpSass from 'gulp-sass' 
 
 const sass = gulpSass(dartSass)
 
-export function js(done) {
+export function js(done){
     src('src/js/app.js')
-        .pipe(dest('build/js'))
+        .pipe(dest ('build/js'))
     done()
 }
 
 export function css(done) {
-    src('src/scss/app.scss', { sourcemaps: true })
-        .pipe(
-            sass().on('error', function (err) {
-                console.error(err.message);
-                this.emit('end');
-            })
-        )
-        .pipe(dest('build/css', { sourcemaps: '.' }))
-
+    src('src/scss/app.scss', {sourcemaps: true})
+        .pipe( sass().on('error', sass.logError) )
+        .pipe( dest('build/css', {sourcemaps: '.'}) )
+        
     done()
 }
-
 
 export function dev() {
     watch('src/scss/**/*.scss', css)
     watch('src/js/**/*.js', js)
 }
+
 // Nueva tarea que solo compila y termina
 export const build = series(js, css)
 // export default series(js, css, dev)
