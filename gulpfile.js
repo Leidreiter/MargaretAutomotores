@@ -28,5 +28,7 @@ export function dev() {
     watch('src/scss/**/*.scss', css)
     watch('src/js/**/*.js', js)
 }
-
+// Nueva tarea que solo compila y termina
+export const build = series(js, css)
+// export default series(js, css, dev)
 export default series(js, css, dev)
