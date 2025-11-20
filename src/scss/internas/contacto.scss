@@ -7,12 +7,12 @@
     height: auto;
     
     @include m.tablet{
-        height: 42rem;
+        height: 50rem;
     }
 
     .formulario-grid{
         @include m.tablet{
-            @include m.grid(2, 16rem);
+            @include m.grid(2, 2rem);
         }
     }
 
@@ -20,8 +20,11 @@
         padding: 2rem 0;
 
         @include m.tablet{
-        margin-top: -50rem;
+        margin-top: -40rem;
         z-index: 100000;
+        }
+        @include m.xl{
+        margin-top: -50rem;
         }
     }
     .grid-form h1{
@@ -89,6 +92,7 @@
     }
     .whats{
         font-size: 2.2rem;
+        color: v.$blanco;
     }
     .whats i{
         color: v.$primario;

@@ -34,7 +34,6 @@
         margin-top: 2rem;
     }
     .menu_footer ul {
-        list-style: none;
         margin: 0;
         padding: 0;
     }
@@ -42,6 +41,7 @@
     .menu_footer li {
         margin: 0;
         padding: 0;
+        list-style: none;
     }
     .menu_footer a{
         color: v.$blanco;
@@ -67,5 +67,6 @@
     .copyright {
         text-align: center;
         font-size: 1.2rem;
+        color: v.$blanco;
     }
 }

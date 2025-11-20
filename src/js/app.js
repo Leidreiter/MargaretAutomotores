@@ -49,18 +49,3 @@ function sendMessage() {
 }
 
 
-// Popup ingresar
-
-const btnIngresar = document.querySelector('.login');
-const popup = document.getElementById('popup');
-
-btnIngresar.addEventListener('click', (e) => {
-    e.preventDefault();
-    popup.classList.add('active');
-});
-
-popup.addEventListener('click', (e) => {
-    if (e.target === popup) {
-        popup.classList.remove('active');
-    }
-});

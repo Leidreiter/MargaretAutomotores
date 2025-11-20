@@ -556,7 +556,7 @@ i {
   }
 }
 
-.ubicacion {
+.location {
   color: #FFFFFF;
 }
 
@@ -599,13 +599,13 @@ i {
   margin-top: 2rem;
 }
 .footer .menu_footer ul {
-  list-style: none;
   margin: 0;
   padding: 0;
 }
 .footer .menu_footer li {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .footer .menu_footer a {
   color: #FFFFFF;
@@ -631,6 +631,7 @@ i {
 .footer .copyright {
   text-align: center;
   font-size: 1.2rem;
+  color: #FFFFFF;
 }
 
 .popup-overlay {
@@ -1437,6 +1438,9 @@ i {
 .compramos-top .compramos-info {
   background-color: #F2F2F2;
   padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .compramos-top .compramos-info {
@@ -1465,7 +1469,7 @@ i {
   margin: 3rem 0;
   line-height: 1.6;
 }
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .compramos-top .compramos-info p {
     font-size: 2rem;
   }
@@ -1489,6 +1493,7 @@ i {
 @media (min-width: 768px) {
   .compramos-top .btn2 {
     width: auto;
+    align-self: flex-start;
   }
 }
 
@@ -1519,18 +1524,18 @@ i {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 2.4rem;
 }
 @media (min-width: 768px) {
   .compramos-icon1,
   .compramos-icon2 {
-    padding: 6rem;
+    padding: 3.4rem;
   }
 }
 @media (min-width: 1440px) {
   .compramos-icon1,
   .compramos-icon2 {
-    padding: 10rem;
+    padding: 4rem;
   }
 }
 
@@ -1538,13 +1543,13 @@ i {
 .compramos-icon2 p {
   text-align: center;
   color: #000000;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .compramos-icon1 p,
   .compramos-icon2 p {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 @media (min-width: 1440px) {
@@ -1722,6 +1727,7 @@ i {
 }
 .banner .banner_p {
   text-wrap: balance;
+  color: #FFFFFF;
 }
 .banner .btn3 {
   background-color: transparent;
@@ -1837,14 +1843,14 @@ i {
 }
 @media (min-width: 768px) {
   .formulario {
-    height: 42rem;
+    height: 50rem;
   }
 }
 @media (min-width: 768px) {
   .formulario .formulario-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16rem;
+    gap: 2rem;
   }
 }
 .formulario .grid-form {
@@ -1852,8 +1858,13 @@ i {
 }
 @media (min-width: 768px) {
   .formulario .grid-form {
-    margin-top: -50rem;
+    margin-top: -40rem;
     z-index: 100000;
+  }
+}
+@media (min-width: 1440px) {
+  .formulario .grid-form {
+    margin-top: -50rem;
   }
 }
 .formulario .grid-form h1 {
@@ -1921,9 +1932,53 @@ i {
 }
 .formulario .whats {
   font-size: 2.2rem;
+  color: #FFFFFF;
 }
 .formulario .whats i {
   color: #00A6FB;
+}
+
+.ubicacion {
+  width: 100%;
+}
+.ubicacion .ubicacion-bg {
+  background-image: url("../../src/img/vehiculoBG.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  position: absolute;
+}
+.ubicacion .ubicacion-overlay {
+  position: relative;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  background-color: #FFFFFF;
+}
+.ubicacion .ubicacion-overlay p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .ubicacion .ubicacion-overlay {
+    height: 30rem;
+    padding: 6rem;
+    margin-bottom: 4rem;
+  }
+}
+@media (min-width: 1440px) {
+  .ubicacion .ubicacion-overlay {
+    row-gap: 2rem;
+    height: 30rem;
+    padding: 10rem;
+    width: 100%;
+    margin-bottom: 8rem;
+  }
 }
 
 .pagos-info {
